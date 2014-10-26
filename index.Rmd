@@ -59,7 +59,7 @@ plot(fit)
 ## Just Click the link!
 
 
-https://javastarchild.shinyapps.io/DevelopingDataProductsProject/
+http://javastarchild.shinyapps.io/DevelopingDataProductsProject/
 
 --- .class #id 
 
