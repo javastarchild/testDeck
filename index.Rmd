@@ -13,7 +13,7 @@ knit        : slidify::knit2slides
 
 ## MPG Calculator
 1. When you know approxamatley how much your car weighs in pounds (lbs) ...
-2. Want to know a good estimate for MPG? Continue reading for how do use it ..
+2. Want to know a good estimate for MPG? Continue reading for how to use it ..
 ```{r, howitworks, echo=FALSE}
 # based on code from: http://www.r-bloggers.com/using-r-for-introductory-statistics-chapter-4/
 # make a copy of mtcars 'cause we're going to add a column
