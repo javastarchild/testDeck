@@ -1,5 +1,5 @@
 ---
-title       : Test deck
+title       : Car weight in Pounds to predicted MPG Calculator
 subtitle    : 
 author      : 
 job         : 
@@ -8,19 +8,74 @@ highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
 ---
 
-## Read-And-Delete
+## MPG Calculator
+1. When you know approxamatley how much your car weighs in pounds (lbs) ...
+2. Want to know a good estimate for MPG? Continue reading for how do use it ..
+```{r, howitworks, echo=FALSE}
+# based on code from: http://www.r-bloggers.com/using-r-for-introductory-statistics-chapter-4/
+# make a copy of mtcars 'cause we're going to add a column
+data(mtcars)
+cars <- mtcars
 
-1. Edit YAML front matter
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
+# add origin column as a factor to cars data frame
+imports <- c(1:3, 8:14, 18:21, 26:28, 30:32)
+origin <- rep("domestic", nrow(mtcars))
+origin[imports] <- "import"
+cars$origin <- factor(origin, levels=c('import', 'domestic'))
+
+# make a vector of colors to color the data points
+us.col <- rgb(0,0,255,192, maxColorValue=255)
+im.col <- rgb(0,255,0,192, maxColorValue=255)
+col <- rep(us.col, nrow(cars))
+col[imports] <- im.col
+
+# set up a two panel plot
+par(mfrow=c(1,3))
+par(mar=c(5,4,5,1)+0.1)
+
+# draw boxplot in first panel
+boxplot(mpg ~ origin, data=cars, col=c(im.col, us.col), outpch=19, outcol=c(us.col, im.col), ylab="mpg")
+grid(nx=NA, ny=NULL)
+
+# draw scatterplot in second panel
+par(mar=c(5,0.5,5,2)+0.1)
+plot(mpg~wt, data=cars, col=col, yaxt='n', pch=as.character(cars$cyl), xlab="weight (thousands of lbs)")
+grid(nx=NA, ny=NULL)
+
+# fit a line describing mpg as a function of weight
+res <- lm(mpg ~ wt, data=cars)
+abline(res, col=rgb(255,0,0,64, maxColorValue=255), lty=2)
+
+# show prediction line
+fit <- lm(mpg ~ wt, data = mtcars)
+plot(fit)
+```
 
 --- .class #id 
 
-## Slide 2
+## Just Click the link!
 
-```{r, fig.height=5, fig.width=5}
-plot(1 : 10, 1 : 10)
-```
 
+https://javastarchild.shinyapps.io/DevelopingDataProductsProject/
+
+--- .class #id 
+
+## Now enter a weight
+
+<img src="assets/img/app.png" alt="Car weight in Pounds to predicted MPG Calculator">
+
+--- .class #id 
+
+## Press "Compute MPG!" button and see the results!!
+
+<img src="assets/img/app2.png" alt="Predicted MPG Calculator">
+
+* How it works?  
+ + R programming tools: http://www.r-project.org/) and 
+ + Shiny by RStudio: http://shiny.rstudio.com/tutorial/ and
+ + Math stuff: http://www.r-bloggers.com/using-r-for-introductory-statistics-chapter-4/
+* See all the code here: https://github.com/javastarchild/DevelopingDataProductsProject
+* Note: Pretty graphics on slide #2 based on R code copied from r-bloggers.com link above.
