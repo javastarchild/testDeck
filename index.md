@@ -13,7 +13,7 @@ knit        : slidify::knit2slides
 
 ## MPG Calculator
 1. When you know approxamatley how much your car weighs in pounds (lbs) ...
-2. Want to know a good estimate for MPG? Continue reading for how do use it ..
+2. Want to know a good estimate for MPG? Continue reading for how to use it ..
 ![plot of chunk howitworks](assets/fig/howitworks1.png) ![plot of chunk howitworks](assets/fig/howitworks2.png) 
 
 --- .class #id 
@@ -21,7 +21,7 @@ knit        : slidify::knit2slides
 ## Just Click the link!
 
 
-https://javastarchild.shinyapps.io/DevelopingDataProductsProject/
+http://javastarchild.shinyapps.io/DevelopingDataProductsProject/
 
 --- .class #id 
 
