@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Car weight in Pounds to predicted MPG Calculator</title>
+  <title>Next Word Prediction Algorithm</title>
   <meta charset="utf-8">
-  <meta name="description" content="Car weight in Pounds to predicted MPG Calculator">
+  <meta name="description" content="Next Word Prediction Algorithm">
   <meta name="author" content="">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -32,7 +32,7 @@
     <!-- LOGO SLIDE -->
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
-    <h1>Car weight in Pounds to predicted MPG Calculator</h1>
+    <h1>Next Word Prediction Algorithm</h1>
     <h2></h2>
     <p><br/></p>
   </hgroup>
@@ -43,14 +43,10 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>MPG Calculator</h2>
+    <h2>Introduction</h2>
   </hgroup>
   <article data-timings="">
-    <ol>
-<li>When you know approxamatley how much your car weighs in pounds (lbs) ...</li>
-<li>Want to know a good estimate for MPG? Continue reading for how to use it ..
-<img src="assets/fig/howitworks1.png" alt="plot of chunk howitworks"> <img src="assets/fig/howitworks2.png" alt="plot of chunk howitworks"> </li>
-</ol>
+    <p>The goal of this application is to create a prediction algorithm for next words in a sentence. This presentation explains how the application and algorithm work. </p>
 
   </article>
   <!-- Presenter Notes -->
@@ -61,7 +57,7 @@
     <h2>Just Click the link!</h2>
   </hgroup>
   <article data-timings="">
-    <p><a href="http://javastarchild.shinyapps.io/DevelopingDataProductsProject/">http://javastarchild.shinyapps.io/DevelopingDataProductsProject/</a></p>
+    <p><a href="http://javastarchild.shinyapps.io/NextWordPrediction/">http://javastarchild.shinyapps.io/NextWordPrediction/</a></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -69,10 +65,10 @@
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Now enter a weight</h2>
+    <h2>Now enter a sentence</h2>
   </hgroup>
   <article data-timings="">
-    <p><img src="assets/img/app.png" alt="Car weight in Pounds to predicted MPG Calculator"></p>
+    <p><img src="assets/img/app.png" alt="Enter a Sentence"></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -80,22 +76,14 @@
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Press &quot;Compute MPG!&quot; button and see the results!!</h2>
+    <h2>Press &quot;Determine Next Word&quot; button and see the results.</h2>
   </hgroup>
   <article data-timings="">
-    <p><img src="assets/img/app2.png" alt="Predicted MPG Calculator"></p>
+    <p><img src="assets/img/app2.png" alt="Determine Next Word"></p>
 
-<ul>
-<li>How it works?<br>
+<h2>How it works</h2>
 
-<ul>
-<li>R programming tools: <a href="http://www.r-project.org/">http://www.r-project.org/</a>) and </li>
-<li>Shiny by RStudio: <a href="http://shiny.rstudio.com/tutorial/">http://shiny.rstudio.com/tutorial/</a> and</li>
-<li>Math stuff: <a href="http://www.r-bloggers.com/using-r-for-introductory-statistics-chapter-4/">http://www.r-bloggers.com/using-r-for-introductory-statistics-chapter-4/</a></li>
-</ul></li>
-<li>See all the code here: <a href="https://github.com/javastarchild/DevelopingDataProductsProject">https://github.com/javastarchild/DevelopingDataProductsProject</a></li>
-<li>Note: Pretty graphics on slide #2 based on R code copied from r-bloggers.com link above.</li>
-</ul>
+<p>A algorithm uses a decsion tree based on NGram frequencies.  These are used to predict the next word.  For example when &quot;Blah bleh&quot; is seen, the highest N frequency 3 Grams with &quot;Blah bleh&quot; as the 1st 2 words will be suggested as the next word.  As another example, when &quot;Blah&quot; is seen, the highest N frequency 2 Grams with &quot;Blah&quot; as the 1st word will be suggested as the next word.</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -107,7 +95,7 @@
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='MPG Calculator'>
+        data-slide=1 title='Introduction'>
          1
       </a>
     </li>
@@ -119,13 +107,13 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Now enter a weight'>
+        data-slide=3 title='Now enter a sentence'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Press &quot;Compute MPG!&quot; button and see the results!!'>
+        data-slide=4 title='Press &quot;Determine Next Word&quot; button and see the results.'>
          4
       </a>
     </li>

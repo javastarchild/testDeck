@@ -1,5 +1,5 @@
 ---
-title       : Car weight in Pounds to predicted MPG Calculator
+title       : Next Word Prediction Algorithm
 subtitle    : 
 author      : 
 job         : 
@@ -11,33 +11,28 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
 
-## MPG Calculator
-1. When you know approxamatley how much your car weighs in pounds (lbs) ...
-2. Want to know a good estimate for MPG? Continue reading for how to use it ..
-![plot of chunk howitworks](assets/fig/howitworks1.png) ![plot of chunk howitworks](assets/fig/howitworks2.png) 
+## Introduction
+The goal of this application is to create a prediction algorithm for next words in a sentence. This presentation explains how the application and algorithm work. 
 
 --- .class #id 
 
 ## Just Click the link!
 
 
-http://javastarchild.shinyapps.io/DevelopingDataProductsProject/
+http://javastarchild.shinyapps.io/NextWordPrediction/
 
 --- .class #id 
 
-## Now enter a weight
+## Now enter a sentence
 
-<img src="assets/img/app.png" alt="Car weight in Pounds to predicted MPG Calculator">
+<img src="assets/img/app.png" alt="Enter a Sentence">
 
 --- .class #id 
 
-## Press "Compute MPG!" button and see the results!!
+## Press "Determine Next Word" button and see the results.
 
-<img src="assets/img/app2.png" alt="Predicted MPG Calculator">
+<img src="assets/img/app2.png" alt="Determine Next Word">
 
-* How it works?  
- + R programming tools: http://www.r-project.org/) and 
- + Shiny by RStudio: http://shiny.rstudio.com/tutorial/ and
- + Math stuff: http://www.r-bloggers.com/using-r-for-introductory-statistics-chapter-4/
-* See all the code here: https://github.com/javastarchild/DevelopingDataProductsProject
-* Note: Pretty graphics on slide #2 based on R code copied from r-bloggers.com link above.
+
+## How it works
+A algorithm uses a decsion tree based on NGram frequencies.  These are used to predict the next word.  For example when "Blah bleh" is seen, the highest N frequency 3 Grams with "Blah bleh" as the 1st 2 words will be suggested as the next word.  As another example, when "Blah" is seen, the highest N frequency 2 Grams with "Blah" as the 1st word will be suggested as the next word.
